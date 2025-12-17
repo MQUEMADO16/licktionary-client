@@ -30,7 +30,7 @@ The frontend interface for **My Licktionary**. Designed to help musicians visual
 Clone the repository and install dependencies:
 
 ```bash
-git clone [https://github.com/yourusername/licktionary-client.git](https://github.com/yourusername/licktionary-client.git)
+git clone https://github.com/MQUEMADO16/licktionary-client.git
 cd licktionary-client
 npm install
 ```
