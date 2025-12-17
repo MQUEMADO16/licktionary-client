@@ -1,6 +1,6 @@
-# The Licktionary - Client 🎹
+# My Licktionary - Client 🎹
 
-The frontend interface for **The Licktionary**. Designed to help musicians visualize, manage, and practice their personal library of jazz vocabulary.
+The frontend interface for **My Licktionary**. Designed to help musicians visualize, manage, and practice their personal library of jazz vocabulary.
 
 ## ✨ Features
 
