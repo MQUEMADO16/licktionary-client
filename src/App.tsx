@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import { Container, Typography, Box } from '@mui/material';
+
+// Placeholder components for now (we will move these to /pages later)
+const Dashboard = () => (
+  <Box sx={{ my: 4 }}>
+    <Typography variant="h4" component="h1" gutterBottom>
+      The Licktionary Dashboard
+    </Typography>
+    <Typography variant="body1">
+      Your jazz vocabulary starts here.
+    </Typography>
+  </Box>
+);
+
+const NotFound = () => (
+  <Box sx={{ my: 4, textAlign: 'center' }}>
+    <Typography variant="h3" color="error">404</Typography>
+    <Typography variant="h5">Page not found</Typography>
+  </Box>
+);
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Container maxWidth="lg">
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        
+        {/* Future Routes: */}
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/new" element={<CreatePhrase />} /> */}
+        
+        {/* Catch all for 404s */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Container>
+  );
 }
 
-export default App
+export default App;
