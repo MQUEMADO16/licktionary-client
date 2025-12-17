@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import type { ReactNode } from 'react';
-import type { User, AuthState } from '../types';
+import type { AuthState } from '../types';
 import authService from '../services/authService';
 
 // Define the Context Shape
